@@ -1,26 +1,22 @@
 /* Empty. Add your own CSS if you like */
-.enter-message-view {
+.view {
     background-image: url('../img/bottle.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.enter-message-view .list-inset {
+.view .list-inset {
     background-color: rgba(255, 255, 255, 0);
 }
 
-.enter-message-view .item-input {
-    border-bottom-right-radius: 2px;
-    border-bottom-left-radius: 2px;
-}
-
-.enter-message-view .scroll-content {
+.view .scroll-content {
   display: table !important;
   width: 100% !important;
   height: 100% !important;
   margin-top: -60px;
 }
-.enter-message-view .scroll {
+
+.view .scroll {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
