@@ -1,6 +1,7 @@
 <ion-view view-title="Message In a Bottle" class="enter-message-view">
     <ion-content>
         <div class="list list-inset message-form">
+            <p ng-show="isError" class="form-error">{{ error }}</p>
             <label class="item item-input">
                 <textarea ng-model="message" type="text" placeholder="Enter a message" maxlength="120" rows="4"></textarea>
             </label>

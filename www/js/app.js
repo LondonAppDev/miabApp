@@ -35,7 +35,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider.state('home', {
         url: '/',
         templateUrl: 'templates/enter_message.html',
-        controller: 'EnterMsgCtrl'
+        controller: 'EnterMsgCtrl',
+        cache: false
     });
 
     $stateProvider.state('message', {
