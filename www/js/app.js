@@ -3,9 +3,14 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic'])
+app = angular.module('miabApp', [
+    'ionic',
+    'ui.router',
+    'miabApp.controllers',
+    'miabApp.services',
+]);
 
-.run(function($ionicPlatform) {
+app.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -21,4 +26,23 @@ angular.module('starter', ['ionic'])
       StatusBar.styleDefault();
     }
   });
+});
+
+
+app.config(function($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise('/');
+
+    $stateProvider.state('home', {
+        url: '/',
+        templateUrl: 'templates/enter_message.html',
+        controller: 'EnterMsgCtrl'
+    });
+
+    $stateProvider.state('message', {
+        url: '/message',
+        templateUrl: 'templates/view_message.html',
+        controller: 'ViewMsgCtrl'
+    });
+
+
 })
