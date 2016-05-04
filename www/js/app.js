@@ -1,8 +1,9 @@
-// Ionic Starter App
 
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
+// Define our app and include the following:
+// - ionic - the framework.
+// - ui.router - angular JS UI router for URLs.
+// - miabApp.controllers - our custom controllers for adding functionality to our screens.
+// - miabApp.services - our custom services for accessing the REST API.
 app = angular.module('miabApp', [
     'ionic',
     'ui.router',
@@ -28,10 +29,12 @@ app.run(function($ionicPlatform) {
   });
 });
 
-
 app.config(function($stateProvider, $urlRouterProvider) {
+
+    // Default to the home state.
     $urlRouterProvider.otherwise('/');
 
+    // Assign the home state to '/' for displaying the enter message screen.
     $stateProvider.state('home', {
         url: '/',
         templateUrl: 'templates/enter_message.html',
@@ -39,11 +42,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
         cache: false
     });
 
+    // Assign the message state to '/message' for displaying a message.
     $stateProvider.state('message', {
         url: '/message',
         templateUrl: 'templates/view_message.html',
         controller: 'ViewMsgCtrl'
     });
 
-
-})
+});
