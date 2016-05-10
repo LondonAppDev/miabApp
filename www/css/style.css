@@ -1,14 +1,16 @@
-/* Empty. Add your own CSS if you like */
+/* Add our background image to our view background */
 .view {
     background-image: url('../img/bottle.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
+/* Back the background of our views and lists white. */
 .view .list-inset {
     background-color: rgba(255, 255, 255, 0);
 }
 
+/* Centre the content. */
 .view .scroll-content {
   display: table !important;
   width: 100% !important;
@@ -16,12 +18,13 @@
   margin-top: -60px;
 }
 
+/* Centre the content. */
 .view .scroll {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
 }
-
+ /* Style the errors, nice and red. */
 .form-error {
     color: #a94442;
     font-weight: bold;

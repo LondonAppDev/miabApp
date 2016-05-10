@@ -1,10 +1,14 @@
+<!-- This is our 'ion-view' which is loaded into the  'ion-nav-view' inside our index.html file. -->
 <ion-view view-title="Message In a Bottle" class="view">
     <ion-content>
         <div class="list list-inset message-form">
+            <!-- This 'p' tag will show any errors that occur. -->
             <p ng-show="isError" class="form-error">{{ error }}</p>
             <label class="item item-input">
+                <!-- This will be our text input box for entering a message. -->
                 <textarea ng-model="message" type="text" placeholder="Enter a message" maxlength="120" rows="4"></textarea>
             </label>
+            <!-- This is our button for sending a message. -->
             <button ng-click="sendMessage(message);" class="button button-block button-positive">
                 <i class="icon ion-email"></i>
             </button>
